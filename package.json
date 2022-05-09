@@ -21,7 +21,7 @@
         "db:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:drop && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
         "tb:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate:undo:all  && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate"
     },
-    "name": "interveiw-test-be",
+    "name": "interview-cuanz-2",
     "version": "1.0.0",
     "description": "interview test backend using nodejs",
     "main": "server.js",
