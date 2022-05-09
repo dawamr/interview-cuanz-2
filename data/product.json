@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ice Tea",
+        "qty": 50,
+        "picture": null,
+        "expiredAt": "2022-05-10",
+        "isActive": true
+    },
+    {
+        "name": "Ice Coffee",
+        "qty": 50,
+        "picture": null,
+        "expiredAt": "2022-05-10",
+        "isActive": true
+    }
+]

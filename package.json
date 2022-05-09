@@ -1,0 +1,39 @@
+{
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.1",
+        "express-validation": "1.0.2",
+        "joi": "10.6.0",
+        "morgan": "^1.10.0",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.3.4",
+        "sequelize-cli": "^6.2.0"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "test": "cross-env NODE_ENV=test ./node_modules/.bin/_mocha --exit",
+        "db:reset": "./node_modules/.bin/sequelize db:drop && ./node_modules/.bin/sequelize db:create && ./node_modules/.bin/sequelize db:migrate",
+        "tb:reset": "./node_modules/.bin/sequelize db:migrate:undo:all && ./node_modules/.bin/sequelize db:migrate",
+        "db:start": "./node_modules/.bin/sequelize db:create && ./node_modules/.bin/sequelize db:migrate",
+        "tb:start": "./node_modules/.bin/sequelize db:migrate",
+        "db:test:start": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:seed:all",
+        "db:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:drop && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
+        "tb:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate:undo:all  && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate"
+    },
+    "name": "interveiw-test-be",
+    "version": "1.0.0",
+    "description": "interview test backend using nodejs",
+    "main": "server.js",
+    "keywords": [
+        "nodejs"
+    ],
+    "author": "Dawam Raja",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "cross-env": "^7.0.3",
+        "mocha": "^9.2.2",
+        "supertest": "^4.0.2"
+    }
+}
