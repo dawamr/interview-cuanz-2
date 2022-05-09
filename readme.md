@@ -83,6 +83,16 @@ Dibawah ini ada array berisi sederetan Strings. ['kita', 'atik', 'tika', 'aku', 
 - repository : **[Github]**
 - documentation api : **[Postman]**
 
+**Installation Guides**
+- Clone my repo [interview_cuanz_2]
+- install all dependencies using npm or yarn `npm install`
+- create db and run migration `npm run db:start` for testing you run `npm run db:test:start`
+- optional if you want using dummy data, run seeding `npm sequelize-cli db:seed:all`
+- i provide .env to set port and node env. Run `cp .env.example .env` to using .env
+- for running the application run `npm run start`
+- you can running application using postman. Check my [documentation api](https://documenter.getpostman.com/view/18078111/UyxdMACs) for details.
+- i make integration test for test enviroment, run `npm run test test/`
+
 **2.Query to get 3 biggest sales:**
 ```sh
 SELECT seller.*, COUNT(product_sales.SellerID) AS total_sell FROM product_sales LEFT JOIN seller ON seller.ID = product_sales.SellerID GROUP BY seller.name ORDER BY (total_sell) DESC LIMIT 3
